@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>top5000_db</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>root@127.0.0.1</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClJpZNIeHy0uXxAPTlNN
+			dXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0YWJs
+			ZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVkQXJj
+			aGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIAWgBl
+			AGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIAwwDFAMoA
+			1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEtATIBRAFIAVEBVgFl
+			AWkBcQF2AXkBiwGOAZMAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
+			AAAAAAABlQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {899, 446}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>USE top5000_db;
+
+DROP TABLE songs;
+
+CREATE TABLE songs (
+id INT(4) AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall DECIMAL(10,4),
+popusa DECIMAL(10,4),
+popuk DECIMAL(10,4),
+popeurope DECIMAL(10,4),
+popworld DECIMAL(10,4),
+PRIMARY KEY(id));
+
+-- THIS IS THE STRUCTURE FOR THE SQL STATEMENTS --
+-- HERE WORKING WITH FILE WITHOUT HEADER ROWS --
+LOAD DATA LOCAL INFILE  
+"/Users/poweruser/Desktop/TopSongs.csv"
+INTO TABLE songs  
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(id,artist,title,year,popall,popusa,popuk,popeurope,popworld);
+
+-- SOME QUERIES TO TRY --
+
+
+
+
+</string>
+			<key>table</key>
+			<string>songs</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>LOAD DATA LOCAL INFILE  
+"/Users/poweruser/Desktop/TopSongs.csv"
+INTO TABLE songs  
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(id,artist,title,year,popall,popusa,popuk,popeurope,popworld)</string>
+		<string>CREATE TABLE songs (
+id INT(4) AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall DECIMAL(10,4),
+popusa DECIMAL(10,4),
+popuk DECIMAL(10,4),
+popeurope DECIMAL(10,4),
+popworld DECIMAL(10,4),
+PRIMARY KEY(id))</string>
+		<string>DROP TABLE songs</string>
+		<string>LOAD DATA LOCAL INFILE  
+"/Users/poweruser/Desktop/TopSongs-Header.csv"
+INTO TABLE songs  
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(id,artist,title,year,popall,popusa,popuk,popeurope,popworld)</string>
+		<string>CREATE TABLE songs (
+id INT(4) AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall DECIMAL(10,4),
+popusa DECIMAL(10,4),
+popuk DECIMAL(10,4),
+pupeurope DECIMAL(10,4),
+popworld DECIMAL(10,4),
+PRIMARY KEY(id))</string>
+		<string>CREATE TABLE songs (
+id INT(4) NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall DECIMAL(10,4),
+popusa DECIMAL(10,4),
+popuk DECIMAL(10,4),
+pupeurope DECIMAL(10,4),
+popworld DECIMAL(10,4),
+PRIMARY KEY(id))</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall DECIMAL(10,4),
+popusa DECIMAL(10,4),
+popuk DECIMAL(10,4),
+pupeurope DECIMAL(10,4),
+popworld DECIMAL(10,4),
+PRIMARY KEY(id))</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall DECIMAL(6,3),
+popusa DECIMAL(6,3),
+popuk DECIMAL(6,3),
+pupeurope DECIMAL(6,3),
+popworld DECIMAL(6,3),
+PRIMARY KEY(id))</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall DECIMAL(6,3),
+popusa DECIMAL(6,3),
+popuk DECIMAL(6,3),
+pupeurope DECIMAL(6,3),
+popworld DECIMAL(6,3),
+PRIMARY DECIMAL(6,3))</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall FLOAT(3),
+popusa FLOAT(3),
+popuk FLOAT(3),
+pupeurope FLOAT(3),
+popworld FLOAT(3),
+PRIMARY KEY (id))</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall FLOAT(3),
+popusa FLOAT(3),
+popuk FLOAT(3),
+pupeurope FLOAT(3),
+popworld FLOAT(3)),
+PRIMARY KEY (id)</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall FLOAT(3),
+popusa FLOAT(3),
+popuk FLOAT(3),
+pupeurope FLOAT(3),
+popworld FLOAT(3)),
+PRIMARY KEY id</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT(4),
+popall FLOAT(3),
+popusa FLOAT(3),
+popuk FLOAT(3),
+pupeurope FLOAT(3),
+popworld FLOAT(3))</string>
+		<string>TABLE songs</string>
+		<string>DELETE TABLE songs</string>
+		<string>CREATE TABLE songs (
+id INT AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT,
+popall FLOAT(3),
+popusa FLOAT(3),
+popuk FLOAT(3),
+pupeurope FLOAT(3),
+popworld FLOAT(3))</string>
+		<string>CREATE TABLE songs (
+id AUTO_INCREMENT NOT NULL,
+artist VARCHAR(60) NOT NULL,
+title VARCHAR(80) NOT NULL,
+year INT,
+popall INT,
+popusa INT,
+popuk INT,
+pupeurope INT,
+popworld INT)</string>
+		<string>USE top5000_db</string>
+		<string>CREATE TABLE songs TEXT (
+id INT(10) AUTO_INCREMENT NOT NULL,
+title TEXT NOT NULL,
+artist TEXT,
+genre TEXT)</string>
+		<string>CREATE TABLE title TEXT,
+artist TEXT,
+genre TEXT</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.16</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
